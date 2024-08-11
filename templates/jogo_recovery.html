@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Visualizar Jogo{% endblock %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Título</th>
+            <th scope="col">Plataforma</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Avaliação</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for jogo in jogos %}
+
+            <tr>
+                <th scope="row">{{ jogo.id }}</th>
+                <td>{{ jogo.titulo }}</td>
+                <td>{{ jogo.plataforma }}</td>
+                <td>{{ jogo.categoria }}</td>
+                <td>{{ jogo.descricao }}</td>
+                <td>{{ jogo.avaliacao }}/10</td>
+                <td>R$ {{ jogo.preco }}</td>
+                <td>
+                    <a href="/jogoteca/create" class="btn btn-primary btn-sm">Novo</a>
+                    <a href="/jogoteca/update/{{ jogo.id }}" class="btn btn-warning btn-sm">Editar</a>
+                    <form action="/jogoteca/delete/{{ jogo.id }}" method="get" style="display:inline;">
+                        <button type="submit" class="btn btn-danger btn-sm">Deletar</button>
+                    </form>
+                </td>
+
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+
+{% endblock %}

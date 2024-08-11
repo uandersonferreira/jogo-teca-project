@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Deletar Jogo{% endblock %}
+
+{% block content %}
+
+    <main class="delete-card">
+        <section class="card confirmacao-delecao">
+            <h2>Você tem certeza que deseja excluir o jogo <strong>{{ jogo.titulo }}</strong>?</h2>
+            <form action="/jogoteca/delete/{{ jogo.id }}" method="post" class="delete-card">
+                <input type="submit" value="Sim, excluir" class="btn-excluir">
+                <a href="/jogoteca/recovery" class="btn-cancelar">Cancelar</a>
+            </form>
+        </section>
+    </main>
+
+{% endblock %}
