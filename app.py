@@ -2,6 +2,8 @@ from flask import Flask
 from database import db
 from flask_migrate import Migrate, migrate
 from jogotecaproject import blueprint_jogos
+from flask.templating import render_template
+
 
 
 app = Flask(__name__)
@@ -21,8 +23,8 @@ db.init_app(app)
 
 @app.route('/')
 def hello_world():  # put application's code here
-    return 'Hello World!'
+    return render_template('jogo_recovery.html')
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run()
