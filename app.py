@@ -23,7 +23,7 @@ db.init_app(app)
 
 @app.route('/')
 def hello_world():  # put application's code here
-    return render_template('jogo_recovery.html')
+    return render_template('home.html')
 
 
 if __name__ == '__main__':
