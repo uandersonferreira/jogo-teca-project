@@ -45,7 +45,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/banner-home.jpg); /* Usa uma imagem de fundo */
+  background-image: url("{{ url_for('static', filename='img/banner-home.jpg') }}"); /* Usa uma imagem de fundo */
   background-size: cover; /* Cobre toda a área do banner */
 }
 
