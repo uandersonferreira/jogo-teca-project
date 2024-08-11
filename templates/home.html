@@ -9,7 +9,167 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
   />
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <style>
+    @charset "UTF-8";
+/* Importa as fontes do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@100;200;300;700;900&display=swap");
+
+/* Define estilos básicos para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --blue-01: #0063e5;
+  --blue-02: #032c77;
+  --blue-03: #08132f;
+  --blue-04: #040714;
+  --blue-05: #090b13;
+
+  --black: #000
+  --black-01: #1e1e24;
+  --black-02: #rgb(4, 5, 5);
+  --eerie-black: #191919;
+
+  --cinnabar: #e94f37;
+  --carrot-orange: #f49d37;
+  --icterine: #fffd82;
+  --red-destaque: #ff0157;
+  --white: #fff;
+  --bg-color-01: #f4f4f4;
+  --bg-color-02: #fcf7f7b4;
+}
+
+/* Define o peso da fonte para parágrafos */
+p {
+  font-weight: 300;
+}
+
+/* Estiliza a seção do banner */
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,7,135,1) 41%, rgba(169,0,255,1) 100%); 
+}
+
+/* Estiliza o conteúdo do banner */
+.banner .content {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Estiliza o título no banner */
+.banner .content h2 {
+  font-size: 5em;
+  color: var(--white);
+}
+
+/* Estiliza o parágrafo no banner */
+.banner .content p {
+  font-size: 1em;
+  color: var(--white);
+}
+
+/* Estiliza o botão */
+.btn {
+  font-size: 1em;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+/* Estilos específicos para cada botão */
+.btn-projects {
+  background-color: var(--red-destaque); /* Azul para projetos */
+}
+
+.btn-linkedin {
+  background-color: #0077b5; /* Azul para LinkedIn */
+}
+
+.btn-github {
+  background-color: #333; /* Cinza escuro para GitHub */
+}
+
+.btn-whatsapp {
+  background-color: #25d366; /* Verde para WhatsApp */
+}
+
+
+/* Estilo para o hover do botão */
+.btn:hover {
+  letter-spacing: 4px;
+}
+
+/* Estiliza o cabeçalho */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+
+
+/* Estiliza o logo no cabeçalho */
+header .logo {
+  color:  var(--white);
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+
+/* Estilo para o span no logo */
+header .logo span {
+  color:  var(--red-destaque);
+}
+
+/* Estiliza a navegação no cabeçalho */
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+/* Estiliza os itens da navegação */
+header .navigation li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+/* Estiliza os links na navegação */
+header .navigation li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+}
+
+
+header .navigation li a.link-destaque:hover{
+  font-weight: 600;
+  border: 2px solid var(--red-destaque);
+  padding: 8px;
+}
+  </style>
 
 </head>
 <body>
