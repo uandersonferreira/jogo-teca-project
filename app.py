@@ -4,11 +4,9 @@ from flask_migrate import Migrate, migrate
 from jogotecaproject import blueprint_jogos
 from flask.templating import render_template
 
-
-
 app = Flask(__name__)
 
-conexao = "sqlite:///tmp/meubanco.sqlite"
+conexao = "sqlite:///meubanco.sqlite"
 
 app.config['SECRET_KEY'] = 'secret-key'
 app.config['SQLALCHEMY_DATABASE_URI'] = conexao
