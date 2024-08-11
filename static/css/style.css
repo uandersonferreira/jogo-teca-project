@@ -1,98 +1,101 @@
+@charset "UTF-8";
+/* Importa as fontes do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@100;200;300;700;900&display=swap");
+
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background-color: #222;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+  display: inline;
+  margin-right: 10px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 main {
-    margin: 20px;
+  margin: 20px;
 }
 
 form {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 form p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 button {
-    padding: 5px 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
-
 form#create {
-    max-width: 60%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
-
 
 /* Estiliza o texto de direitos autorais */
 .copyrightText {
-    padding: 8px 40px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background: #cccccc;
+  padding: 8px 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: #cccccc;
 }
 
 /* Estiliza o parágrafo no texto de direitos autorais */
 .copyrightText p {
-    color: #333;
+  color: #333;
 }
 
 /* Estiliza os links no texto de direitos autorais */
 .copyrightText a {
-    color: black;
-    font-weight: 500;
-    text-decoration: none;
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
 }
